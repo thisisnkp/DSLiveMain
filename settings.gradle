@@ -1,0 +1,5 @@
+rootProject.name = "Rayzi New"
+include ':app'
+include ':imagepicker'
+include ':mylibrary'
+include ':mylibrary2'

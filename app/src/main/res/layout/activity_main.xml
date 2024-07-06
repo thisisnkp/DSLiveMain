@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_bg"
+        tools:context=".activity.MainActivity">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpagerMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="60dp" />
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+           android:background="@color/white"
+
+            android:id="@+id/container"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="42sp"
+                android:visibility="gone"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="36dp"/>
+            <com.ismaeldivita.chipnavigation.ChipNavigationBar
+                android:id="@+id/bottom_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/white"
+                android:elevation="16dp"
+                android:padding="8dp"
+                app:cnb_addBottomInset="true"
+                app:cnb_addLeftInset="true"
+                app:cnb_addRightInset="true"
+                app:cnb_menuResource="@menu/menu"
+                app:cnb_orientationMode="horizontal" />
+
+
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <include layout="@layout/layout_no_internet" />
+
+    </RelativeLayout>
+
+</layout>
